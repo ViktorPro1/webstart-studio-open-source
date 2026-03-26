@@ -1,0 +1,403 @@
+/* ============================================================
+   TABLET  ≤ 1024px
+   ============================================================ */
+@media (max-width: 1024px) {
+    .landing-templates__hero {
+        padding: 4rem 2rem 3.5rem;
+    }
+
+    .landing-templates__hero-title {
+        font-size: 2.75rem;
+        letter-spacing: -1.5px;
+    }
+
+    .landing-templates__grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+
+    .landing-templates__info-grid,
+    .landing-templates__calculator-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+
+    .landing-templates__templates,
+    .landing-templates__info,
+    .landing-templates__calculator,
+    .landing-templates__cta {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+}
+
+/* ============================================================
+   MOBILE  ≤ 768px
+   ============================================================ */
+@media (max-width: 768px) {
+    .landing-templates__hero {
+        padding: 3rem 1.5rem 2.75rem;
+    }
+
+    .landing-templates__hero-title {
+        font-size: 2.1rem;
+        letter-spacing: -1px;
+        line-height: 1.2;
+    }
+
+    .landing-templates__hero-description {
+        font-size: 0.97rem;
+        line-height: 1.7;
+        margin-bottom: 2rem;
+    }
+
+    /* stats — повна ширина */
+    .landing-templates__hero-stats {
+        gap: 0;
+        flex-direction: row;
+        background: var(--lt-surface);
+        border: 1px solid var(--lt-border-md);
+        border-radius: 14px;
+        overflow: hidden;
+        margin-top: 2rem;
+    }
+
+    .landing-templates__stat-item {
+        flex: 1;
+        padding: 1rem 0.75rem;
+        text-align: center;
+        border-right: 1px solid var(--lt-border);
+    }
+
+    .landing-templates__stat-item:last-child {
+        border-right: none;
+    }
+
+    .landing-templates__stat-number {
+        font-size: 1.5rem;
+        margin-bottom: 3px;
+    }
+
+    .landing-templates__stat-label {
+        font-size: 10px;
+    }
+
+    /* sections padding */
+    .landing-templates__info,
+    .landing-templates__templates,
+    .landing-templates__calculator,
+    .landing-templates__cta {
+        padding: 3rem 1.5rem;
+    }
+
+    .landing-templates__section-title {
+        font-size: 1.75rem;
+        margin-bottom: 2rem;
+    }
+
+    /* info grid — одна колонка */
+    .landing-templates__info-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .landing-templates__info-card {
+        padding: 1.5rem;
+    }
+
+    /* categories */
+    .landing-templates__categories-filter {
+        gap: 0.5rem;
+        margin-bottom: 2.5rem;
+    }
+
+    .landing-templates__category-btn {
+        padding: 0.55rem 1rem;
+        font-size: 0.875rem;
+    }
+
+    /* grid — одна колонка */
+    .landing-templates__grid {
+        grid-template-columns: 1fr;
+        gap: 1.25rem;
+    }
+
+    /* calculator */
+    .landing-templates__calculator-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .landing-templates__price-card--featured {
+        transform: none;
+    }
+
+    .landing-templates__price-card--featured:hover {
+        transform: translateY(-8px);
+    }
+
+    /* CTA */
+    .landing-templates__cta-title {
+        font-size: 1.75rem;
+    }
+
+    .landing-templates__cta-description {
+        font-size: 1rem;
+    }
+
+    .landing-templates__cta-buttons {
+        flex-direction: column;
+        gap: 0.875rem;
+    }
+
+    .landing-templates__cta-btn {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/* ============================================================
+   SMALL PHONE  ≤ 480px
+   ============================================================ */
+@media (max-width: 480px) {
+    .landing-templates__hero {
+        padding: 2.5rem 1rem 2.25rem;
+    }
+
+    .landing-templates__hero-badge {
+        font-size: 11px;
+        padding: 4px 12px;
+        margin-bottom: 1.25rem;
+    }
+
+    .landing-templates__hero-title {
+        font-size: 1.85rem;
+        letter-spacing: -0.75px;
+        margin-bottom: 1rem;
+    }
+
+    .landing-templates__hero-description {
+        font-size: 0.92rem;
+        margin-bottom: 1.75rem;
+    }
+
+    /* stats — вертикально */
+    .landing-templates__hero-stats {
+        flex-direction: column;
+        border-radius: 12px;
+        max-width: 280px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .landing-templates__stat-item {
+        border-right: none;
+        border-bottom: 1px solid var(--lt-border);
+        padding: 0.875rem 1rem;
+    }
+
+    .landing-templates__stat-item:last-child {
+        border-bottom: none;
+    }
+
+    .landing-templates__stat-number {
+        font-size: 1.35rem;
+    }
+
+    .landing-templates__stat-label {
+        font-size: 10px;
+    }
+
+    /* sections */
+    .landing-templates__info,
+    .landing-templates__templates,
+    .landing-templates__calculator,
+    .landing-templates__cta {
+        padding: 2.25rem 1rem;
+    }
+
+    .landing-templates__section-title {
+        font-size: 1.5rem;
+        margin-bottom: 1.75rem;
+    }
+
+    /* info cards — grid: іконка ліворуч, заголовок + текст праворуч */
+    .landing-templates__info-card {
+        display: grid;
+        grid-template-columns: 36px 1fr;
+        grid-template-rows: auto auto;
+        column-gap: 0.875rem;
+        align-items: start;
+        padding: 1.25rem;
+    }
+
+    .landing-templates__info-icon {
+        font-size: 1.5rem;
+        margin-bottom: 0;
+        grid-column: 1;
+        grid-row: 1 / 3;
+        align-self: center;
+        flex-shrink: 0;
+    }
+
+    .landing-templates__info-card h3 {
+        font-size: 13.5px;
+        font-weight: 700;
+        margin-bottom: 3px;
+        grid-column: 2;
+        grid-row: 1;
+        align-self: end;
+    }
+
+    .landing-templates__info-card p {
+        font-size: 12px;
+        line-height: 1.55;
+        margin: 0;
+        grid-column: 2;
+        grid-row: 2;
+        align-self: start;
+    }
+
+    /* categories */
+    .landing-templates__categories-filter {
+        gap: 6px;
+        margin-bottom: 2rem;
+    }
+
+    .landing-templates__category-btn {
+        padding: 0.45rem 0.875rem;
+        font-size: 0.82rem;
+        gap: 4px;
+    }
+
+    .landing-templates__cat-icon {
+        font-size: 14px;
+    }
+
+    /* template cards */
+    .landing-templates__card-visual {
+        padding: 1.25rem 1.25rem 1rem;
+    }
+
+    .landing-templates__card-icon {
+        width: 48px;
+        height: 48px;
+        font-size: 1.5rem;
+        border-radius: 12px;
+    }
+
+    .landing-templates__conversion-badge {
+        font-size: 11px;
+        padding: 4px 10px;
+    }
+
+    .landing-templates__card-content {
+        padding: 1.25rem;
+    }
+
+    .landing-templates__card-name {
+        font-size: 1.15rem;
+        margin-bottom: 6px;
+        letter-spacing: -0.25px;
+    }
+
+    .landing-templates__card-description {
+        font-size: 0.875rem;
+        line-height: 1.6;
+        margin-bottom: 1rem;
+    }
+
+    .landing-templates__features-label {
+        font-size: 11px;
+        margin-bottom: 8px;
+    }
+
+    .landing-templates__feature-tag {
+        font-size: 11px;
+        padding: 3px 9px;
+    }
+
+    .landing-templates__card-link {
+        padding: 0.875rem 1.1rem;
+        font-size: 0.875rem;
+        margin-top: 1rem;
+    }
+
+    /* price cards */
+    .landing-templates__price-card {
+        padding: 1.5rem 1.25rem;
+    }
+
+    .landing-templates__price-amount {
+        font-size: 2rem;
+        margin-bottom: 1.25rem;
+    }
+
+    .landing-templates__price-label {
+        font-size: 1rem;
+    }
+
+    /* CTA */
+    .landing-templates__cta-title {
+        font-size: 1.5rem;
+    }
+
+    .landing-templates__cta-description {
+        font-size: 0.93rem;
+    }
+
+    .landing-templates__cta-btn {
+        padding: 0.9rem 1.5rem;
+        font-size: 0.95rem;
+    }
+}
+
+/* ============================================================
+   EXTRA SMALL  ≤ 360px
+   ============================================================ */
+@media (max-width: 360px) {
+    .landing-templates__hero {
+        padding: 2rem 0.875rem 2rem;
+    }
+
+    .landing-templates__hero-title {
+        font-size: 1.65rem;
+    }
+
+    .landing-templates__hero-description {
+        font-size: 0.875rem;
+    }
+
+    .landing-templates__info,
+    .landing-templates__templates,
+    .landing-templates__calculator,
+    .landing-templates__cta {
+        padding: 2rem 0.875rem;
+    }
+
+    .landing-templates__section-title {
+        font-size: 1.35rem;
+    }
+
+    .landing-templates__card-visual {
+        padding: 1rem;
+    }
+
+    .landing-templates__card-content {
+        padding: 1rem;
+    }
+
+    .landing-templates__card-icon {
+        width: 40px;
+        height: 40px;
+        font-size: 1.25rem;
+    }
+
+    .landing-templates__card-name {
+        font-size: 1.05rem;
+    }
+
+    .landing-templates__cta-title {
+        font-size: 1.3rem;
+    }
+}

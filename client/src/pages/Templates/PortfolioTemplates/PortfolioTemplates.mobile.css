@@ -1,0 +1,401 @@
+/* ============================================================
+   TABLET  ≤ 1024px
+   ============================================================ */
+@media (max-width: 1024px) {
+    .portfolio-templates__hero {
+        padding: 3.5rem 2rem 3rem;
+    }
+
+    .portfolio-templates__hero-title {
+        font-size: 2.75rem;
+        letter-spacing: -1.5px;
+    }
+
+    .portfolio-templates__features {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .portfolio-templates__feature-card {
+        border-right: 1px solid var(--pt-border);
+        border-bottom: 1px solid var(--pt-border);
+    }
+
+    .portfolio-templates__feature-card:nth-child(2n) {
+        border-right: none;
+    }
+
+    .portfolio-templates__feature-card:nth-child(3),
+    .portfolio-templates__feature-card:nth-child(4) {
+        border-bottom: none;
+    }
+
+    .portfolio-templates__grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+
+    .portfolio-templates__templates {
+        padding: 3rem 2rem;
+    }
+
+    .portfolio-templates__cta {
+        padding: 2rem;
+    }
+}
+
+/* ============================================================
+   MOBILE  ≤ 768px
+   ============================================================ */
+@media (max-width: 768px) {
+    .portfolio-templates {
+        border-radius: 12px;
+    }
+
+    .portfolio-templates__hero {
+        padding: 2.75rem 1.5rem 2.5rem;
+    }
+
+    .portfolio-templates__hero-title {
+        font-size: 2.1rem;
+        letter-spacing: -1px;
+    }
+
+    .portfolio-templates__hero-description {
+        font-size: 0.95rem;
+        margin-bottom: 2rem;
+    }
+
+    /* stats — повна ширина, 3 колонки */
+    .portfolio-templates__hero-stats {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .portfolio-templates__stat-item {
+        padding: 1rem 0.75rem;
+    }
+
+    .portfolio-templates__stat-number {
+        font-size: 1.5rem;
+    }
+
+    .portfolio-templates__stat-label {
+        font-size: 10px;
+    }
+
+    /* features — 2 колонки */
+    .portfolio-templates__features {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* картки — одна колонка */
+    .portfolio-templates__grid {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .portfolio-templates__templates {
+        padding: 2.5rem 1.5rem;
+    }
+
+    .portfolio-templates__section-title {
+        font-size: 1.5rem;
+    }
+
+    /* CTA — вертикально */
+    .portfolio-templates__cta {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 1.25rem;
+        padding: 2rem 1.5rem;
+    }
+
+    .portfolio-templates__cta-content {
+        text-align: center;
+    }
+
+    .portfolio-templates__cta-title {
+        font-size: 1.25rem;
+    }
+
+    .portfolio-templates__cta-buttons {
+        width: 100%;
+        flex-direction: row;
+    }
+
+    .portfolio-templates__cta-btn {
+        flex: 1;
+        text-align: center;
+    }
+}
+
+/* ============================================================
+   SMALL PHONE  ≤ 480px
+   ============================================================ */
+@media (max-width: 480px) {
+    .portfolio-templates__hero {
+        padding: 2.25rem 1rem 2rem;
+    }
+
+    .portfolio-templates__hero-badge {
+        font-size: 11px;
+        padding: 4px 11px;
+        margin-bottom: 1.25rem;
+    }
+
+    .portfolio-templates__hero-title {
+        font-size: 1.85rem;
+        letter-spacing: -0.75px;
+        margin-bottom: 1rem;
+    }
+
+    .portfolio-templates__hero-description {
+        font-size: 0.9rem;
+        line-height: 1.75;
+        margin-bottom: 1.75rem;
+    }
+
+    /* stats — вертикально */
+    .portfolio-templates__hero-stats {
+        grid-template-columns: repeat(3, 1fr);
+        width: 100%;
+    }
+
+    .portfolio-templates__stat-item {
+        padding: 0.875rem 0.5rem;
+    }
+
+    .portfolio-templates__stat-number {
+        font-size: 1.35rem;
+    }
+
+    .portfolio-templates__stat-label {
+        font-size: 9.5px;
+    }
+
+    /* features — горизонтальні рядки */
+    .portfolio-templates__features {
+        grid-template-columns: 1fr;
+    }
+
+    .portfolio-templates__feature-card {
+        display: flex;
+        align-items: center;
+        gap: 0.875rem;
+        padding: 1rem 1.25rem;
+        border-right: none;
+        border-bottom: 1px solid var(--pt-border);
+    }
+
+    .portfolio-templates__feature-card:last-child {
+        border-bottom: none;
+    }
+
+    .portfolio-templates__feature-icon {
+        font-size: 20px;
+        margin-bottom: 0;
+        flex-shrink: 0;
+    }
+
+    .portfolio-templates__feature-card h3 {
+        font-size: 13px;
+        margin-bottom: 2px;
+    }
+
+    .portfolio-templates__feature-card p {
+        font-size: 11.5px;
+        line-height: 1.5;
+    }
+
+    /* templates section */
+    .portfolio-templates__templates {
+        padding: 2rem 1rem;
+    }
+
+    .portfolio-templates__templates::before {
+        font-size: 9px;
+    }
+
+    .portfolio-templates__section-title {
+        font-size: 1.3rem;
+    }
+
+    .portfolio-templates__section-subtitle {
+        font-size: 12px;
+        margin-bottom: 1.5rem;
+    }
+
+    /* картки */
+    .portfolio-templates__card-header {
+        height: 84px;
+        padding: 12px 14px;
+    }
+
+    .portfolio-templates__card-icon {
+        width: 40px;
+        height: 40px;
+        font-size: 18px;
+        border-radius: 9px;
+    }
+
+    .portfolio-templates__card-badge {
+        font-size: 9px;
+        padding: 2px 8px;
+    }
+
+    .portfolio-templates__card-name {
+        font-size: 15px;
+        padding: 12px 14px 0;
+    }
+
+    .portfolio-templates__card-description {
+        font-size: 12px;
+        padding: 0 14px;
+        margin-bottom: 10px;
+    }
+
+    .portfolio-templates__card-features {
+        padding: 0 14px;
+        margin-bottom: 10px;
+    }
+
+    .portfolio-templates__features-list {
+        gap: 4px;
+    }
+
+    .portfolio-templates__features-list li {
+        font-size: 11px;
+        padding: 2px 7px;
+    }
+
+    .portfolio-templates__card-best-for {
+        margin: 0 14px 10px;
+        font-size: 11px;
+        padding: 7px 10px;
+    }
+
+    .portfolio-templates__card-link {
+        margin: 0 14px 14px;
+        padding: 9px 12px;
+        font-size: 12.5px;
+    }
+
+    /* CTA */
+    .portfolio-templates__cta {
+        padding: 1.75rem 1rem;
+    }
+
+    .portfolio-templates__cta-title {
+        font-size: 1.15rem;
+    }
+
+    .portfolio-templates__cta-description {
+        font-size: 12px;
+    }
+
+    .portfolio-templates__cta-buttons {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .portfolio-templates__cta-btn {
+        width: 100%;
+        padding: 10px 16px;
+        font-size: 13px;
+    }
+}
+
+/* ============================================================
+   EXTRA SMALL  ≤ 360px
+   ============================================================ */
+@media (max-width: 360px) {
+    .portfolio-templates__hero {
+        padding: 2rem 0.875rem 1.75rem;
+    }
+
+    .portfolio-templates__hero-title {
+        font-size: 1.65rem;
+        letter-spacing: -0.5px;
+    }
+
+    .portfolio-templates__hero-description {
+        font-size: 0.875rem;
+    }
+
+    /* stats — вертикально на дуже малих екранах */
+    .portfolio-templates__hero-stats {
+        grid-template-columns: 1fr;
+        max-width: 240px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .portfolio-templates__stat-item+.portfolio-templates__stat-item {
+        border-left: none;
+        border-top: 1px solid var(--pt-border);
+    }
+
+    .portfolio-templates__stat-item {
+        padding: 0.75rem 1rem;
+    }
+
+    .portfolio-templates__stat-number {
+        font-size: 1.25rem;
+    }
+
+    .portfolio-templates__feature-card {
+        padding: 0.875rem 1rem;
+        gap: 0.75rem;
+    }
+
+    .portfolio-templates__feature-icon {
+        font-size: 18px;
+    }
+
+    .portfolio-templates__feature-card h3 {
+        font-size: 12px;
+    }
+
+    .portfolio-templates__feature-card p {
+        font-size: 11px;
+    }
+
+    .portfolio-templates__templates {
+        padding: 1.75rem 0.875rem;
+    }
+
+    .portfolio-templates__section-title {
+        font-size: 1.2rem;
+    }
+
+    .portfolio-templates__card-header {
+        height: 76px;
+    }
+
+    .portfolio-templates__card-name {
+        font-size: 14px;
+        padding: 10px 12px 0;
+    }
+
+    .portfolio-templates__card-description,
+    .portfolio-templates__card-features {
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+
+    .portfolio-templates__card-best-for,
+    .portfolio-templates__card-link {
+        margin-left: 12px;
+        margin-right: 12px;
+    }
+
+    .portfolio-templates__cta {
+        padding: 1.5rem 0.875rem;
+    }
+
+    .portfolio-templates__cta-title {
+        font-size: 1.1rem;
+    }
+}

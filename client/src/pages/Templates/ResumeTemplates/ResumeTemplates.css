@@ -1,0 +1,560 @@
+.resume-templates {
+    --rt-bg: #e8e8ec;
+    --rt-bg-2: #dddde2;
+    --rt-bg-3: #d2d2d8;
+    --rt-surface: #f2f2f5;
+    --rt-border: rgba(0, 0, 0, 0.10);
+    --rt-text: #18182a;
+    --rt-text-2: #3d3d55;
+    --rt-text-3: #7070a0;
+
+    min-height: 100vh;
+    background: var(--rt-bg);
+    color: var(--rt-text);
+    overflow-x: hidden;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.resume-templates-templates-wrapper {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+/* Hero Section */
+.resume-templates-hero-section {
+    padding: 6rem 2rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.resume-templates-hero-section::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(59, 130, 246, 0.15) 0%, transparent 70%);
+    animation: rotateReverse 25s linear infinite;
+}
+
+.resume-templates-hero-section::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(59, 130, 246, 0.15) 0%, transparent 70%);
+    animation: rotateReverse 25s linear infinite;
+}
+
+@keyframes rotateReverse {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(-360deg);
+    }
+}
+
+.resume-templates-hero-content {
+    position: relative;
+    z-index: 1;
+    animation: fadeInUp 0.8s ease-out;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.resume-templates-hero-badge {
+    display: inline-block;
+    padding: 0.5rem 1.5rem;
+    background: rgba(59, 130, 246, 0.1);
+    border: 2px solid rgba(59, 130, 246, 0.3);
+    border-radius: 50px;
+    color: #3b82f6;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+}
+
+.resume-templates-hero-title {
+    font-size: 4rem;
+    font-weight: 900;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+    letter-spacing: -2px;
+    color: var(--rt-text);
+}
+
+.resume-templates-highlight {
+    background: linear-gradient(135deg, #3b82f6 0%, #f43f5e 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.resume-templates-hero-description {
+    font-size: 1.25rem;
+    line-height: 1.8;
+    color: var(--rt-text-2);
+    max-width: 800px;
+    margin: 0 auto 3rem;
+}
+
+.resume-templates-hero-stats {
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+    margin-top: 3rem;
+}
+
+.resume-templates-stat-item {
+    text-align: center;
+}
+
+.resume-templates-stat-number {
+    font-size: 3rem;
+    font-weight: 900;
+    background: linear-gradient(135deg, #3b82f6 0%, #f43f5e 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 0.5rem;
+}
+
+.resume-templates-stat-label {
+    font-size: 1rem;
+    color: var(--rt-text-2);
+    font-weight: 500;
+}
+
+/* Benefits Section */
+.resume-templates-benefits-section {
+    padding: 4rem 2rem;
+    background: var(--rt-bg-2);
+}
+
+.resume-templates-section-title {
+    color: var(--rt-text);
+    font-size: 2.5rem;
+    font-weight: 800;
+    text-align: center;
+    margin-bottom: 3rem;
+    letter-spacing: -1px;
+}
+
+.resume-templates-benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.resume-templates-benefit-card {
+    padding: 2rem;
+    background: var(--rt-surface);
+    border: 1px solid var(--rt-border);
+    border-radius: 16px;
+    transition: all 0.3s ease;
+    animation: fadeIn 0.6s ease-out backwards;
+}
+
+.resume-templates-benefit-card:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.resume-templates-benefit-card:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.resume-templates-benefit-card:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+.resume-templates-benefit-card:nth-child(4) {
+    animation-delay: 0.4s;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.resume-templates-benefit-card:hover {
+    transform: translateY(-8px);
+    border-color: rgba(59, 130, 246, 0.5);
+    box-shadow: 0 20px 60px rgba(59, 130, 246, 0.2);
+}
+
+.resume-templates-benefit-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.resume-templates-benefit-card h3 {
+    color: var(--rt-text);
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+}
+
+.resume-templates-benefit-card p {
+    color: var(--rt-text-2);
+    line-height: 1.7;
+    margin: 0;
+}
+
+/* Templates Section */
+.resume-templates-templates-section {
+    padding: 6rem 2rem;
+}
+
+.resume-templates-section-subtitle {
+    text-align: center;
+    font-size: 1.1rem;
+    color: var(--rt-text-3);
+    margin-top: -2rem;
+    margin-bottom: 4rem;
+}
+
+.resume-templates-templates-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    gap: 2.5rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.resume-templates-template-card {
+    background: var(--rt-surface);
+    border: 1px solid var(--rt-border);
+    border-radius: 20px;
+    padding: 2rem;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+    animation: slideUp 0.6s ease-out backwards;
+}
+
+.resume-templates-template-card:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.resume-templates-template-card:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.resume-templates-template-card:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+.resume-templates-template-card:nth-child(4) {
+    animation-delay: 0.4s;
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.resume-templates-template-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: var(--card-color);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.resume-templates-template-card:hover::before,
+.resume-templates-template-card.active::before {
+    opacity: 1;
+}
+
+.resume-templates-template-card:hover,
+.resume-templates-template-card.active {
+    transform: translateY(-12px);
+    border-color: var(--card-color);
+    box-shadow: 0 25px 70px rgba(0, 0, 0, 0.5);
+}
+
+.resume-templates-template-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1.5rem;
+}
+
+.resume-templates-template-icon {
+    width: 70px;
+    height: 70px;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.resume-templates-popularity-badge {
+    padding: 0.4rem 0.8rem;
+    background: rgba(234, 179, 8, 0.1);
+    border: 1px solid rgba(234, 179, 8, 0.3);
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #eab308;
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+.resume-templates-popularity-star {
+    font-size: 0.9rem;
+}
+
+.resume-templates-template-name {
+    color: var(--rt-text);
+    font-size: 1.75rem;
+    font-weight: 800;
+    margin-bottom: 0.75rem;
+    letter-spacing: -0.5px;
+}
+
+.resume-templates-template-description {
+    color: var(--rt-text-2);
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.resume-templates-template-features {
+    margin-bottom: 1.5rem;
+}
+
+.resume-templates-features-label {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--rt-text-2);
+    margin-bottom: 0.75rem;
+}
+
+.resume-templates-features-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.resume-templates-features-list li {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 0;
+    font-size: 0.95rem;
+    color: var(--rt-text-2);
+}
+
+.resume-templates-feature-check {
+    color: var(--card-color);
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+.resume-templates-template-best-for {
+    padding: 1rem;
+    background: var(--rt-bg-2);
+    border-radius: 12px;
+    margin-bottom: 1.5rem;
+}
+
+.resume-templates-best-for-label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--rt-text-2);
+    margin-bottom: 0.5rem;
+}
+
+.resume-templates-best-for-text {
+    font-size: 0.95rem;
+    color: var(--rt-text-2);
+    line-height: 1.6;
+}
+
+.resume-templates-template-link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 1.5rem;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.resume-templates-template-link:hover {
+    transform: translateX(4px);
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.4);
+}
+
+.resume-templates-link-arrow {
+    font-size: 1.5rem;
+    transition: transform 0.3s ease;
+}
+
+.resume-templates-template-link:hover .resume-templates-link-arrow {
+    transform: translateX(5px);
+}
+
+/* Tips Section */
+.resume-templates-tips-section {
+    padding: 4rem 2rem;
+    background: var(--rt-bg-2);
+}
+
+.resume-templates-tips-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.resume-templates-tip-card {
+    padding: 2rem;
+    background: var(--rt-surface);
+    border: 1px solid var(--rt-border);
+    border-radius: 16px;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.resume-templates-tip-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(59, 130, 246, 0.4);
+}
+
+.resume-templates-tip-number {
+    font-size: 3rem;
+    font-weight: 900;
+    background: linear-gradient(135deg, #3b82f6 0%, #f43f5e 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 1rem;
+    opacity: 0.6;
+}
+
+.resume-templates-tip-card h3 {
+    color: var(--rt-text);
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+}
+
+.resume-templates-tip-card p {
+    color: var(--rt-text-2);
+    line-height: 1.7;
+    margin: 0;
+}
+
+/* CTA Section */
+.resume-templates-cta-section {
+    padding: 6rem 2rem;
+    background: var(--rt-bg-2);
+    border-top: 1px solid var(--rt-border);
+}
+
+.resume-templates-cta-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.resume-templates-cta-title {
+    color: var(--rt-text);
+    font-size: 3rem;
+    font-weight: 900;
+    margin-bottom: 1.5rem;
+    letter-spacing: -1px;
+}
+
+.resume-templates-cta-description {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: var(--rt-text-2);
+    margin-bottom: 2.5rem;
+}
+
+.resume-templates-cta-buttons {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.resume-templates-cta-btn {
+    padding: 1.25rem 2.5rem;
+    font-size: 1.1rem;
+    font-weight: 700;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: inherit;
+}
+
+.resume-templates-cta-btn-primary {
+    background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+    color: #fff;
+    box-shadow: 0 4px 15px rgba(59, 130, 246, 0.4);
+}
+
+.resume-templates-cta-btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 30px rgba(59, 130, 246, 0.6);
+}
+
+.resume-templates-cta-btn-secondary {
+    background: transparent;
+    color: var(--rt-text);
+    border: 2px solid rgba(0, 0, 0, 0.25);
+}
+
+.resume-templates-cta-btn-secondary:hover {
+    background: rgba(0, 0, 0, 0.06);
+    border-color: rgba(0, 0, 0, 0.4);
+}

@@ -1,0 +1,198 @@
+/* ============================================================
+   TABLET  ≤ 1024px
+   ============================================================ */
+@media (max-width: 1024px) {
+    .resume-templates-hero-title {
+        font-size: 2.75rem;
+        letter-spacing: -1.5px;
+    }
+
+    .resume-templates-templates-grid,
+    .resume-templates-benefits-grid,
+    .resume-templates-tips-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ============================================================
+   MOBILE  ≤ 768px
+   ============================================================ */
+@media (max-width: 768px) {
+    .resume-templates {
+        border-radius: 12px;
+    }
+
+    .resume-templates-hero-section {
+        padding: 2.75rem 1.5rem 2.5rem;
+    }
+
+    .resume-templates-hero-title {
+        font-size: 2.1rem;
+        letter-spacing: -1px;
+    }
+
+    .resume-templates-hero-description {
+        font-size: 0.95rem;
+        margin-bottom: 2rem;
+    }
+
+    .resume-templates-hero-stats {
+        gap: 1.5rem;
+        width: 100%;
+    }
+
+    .resume-templates-stat-number {
+        font-size: 1.5rem;
+    }
+
+    .resume-templates-benefits-section,
+    .resume-templates-templates-section,
+    .resume-templates-tips-section,
+    .resume-templates-cta-section {
+        padding: 2.5rem 1.5rem;
+    }
+
+    .resume-templates-section-title {
+        font-size: 1.5rem;
+    }
+
+    .resume-templates-benefits-grid,
+    .resume-templates-tips-grid {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .resume-templates-templates-grid {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .resume-templates-cta-section {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 1.25rem;
+    }
+
+    .resume-templates-cta-title {
+        font-size: 1.25rem;
+    }
+
+    .resume-templates-cta-description {
+        font-size: 0.9rem;
+    }
+
+    .resume-templates-cta-buttons {
+        flex-direction: row;
+        gap: 8px;
+        width: 100%;
+    }
+
+    .resume-templates-cta-btn {
+        flex: 1;
+        text-align: center;
+    }
+}
+
+/* ============================================================
+   SMALL PHONE  ≤ 480px
+   ============================================================ */
+@media (max-width: 480px) {
+    .resume-templates-hero-section {
+        padding: 2.25rem 1rem 2rem;
+    }
+
+    .resume-templates-hero-badge {
+        font-size: 11px;
+        padding: 4px 11px;
+        margin-bottom: 1.25rem;
+    }
+
+    .resume-templates-hero-title {
+        font-size: 1.85rem;
+        letter-spacing: -0.75px;
+    }
+
+    .resume-templates-hero-description {
+        font-size: 0.9rem;
+        line-height: 1.75;
+    }
+
+    .resume-templates-hero-stats {
+        flex-direction: column;
+        gap: 1.25rem;
+    }
+
+    .resume-templates-stat-number {
+        font-size: 1.35rem;
+    }
+
+    .resume-templates-benefits-section,
+    .resume-templates-templates-section,
+    .resume-templates-tips-section,
+    .resume-templates-cta-section {
+        padding: 2rem 1rem;
+    }
+
+    .resume-templates-section-title {
+        font-size: 1.3rem;
+    }
+
+    .resume-templates-section-subtitle {
+        font-size: 12px;
+    }
+
+    .resume-templates-benefit-card,
+    .resume-templates-tip-card {
+        padding: 1.25rem;
+    }
+
+    .resume-templates-benefit-icon {
+        font-size: 1.5rem;
+    }
+
+    .resume-templates-benefit-card h3,
+    .resume-templates-tip-card h3 {
+        font-size: 1rem;
+    }
+
+    .resume-templates-template-card {
+        padding: 1.25rem;
+    }
+
+    .resume-templates-template-icon {
+        width: 46px;
+        height: 46px;
+        font-size: 1.25rem;
+    }
+
+    .resume-templates-template-name {
+        font-size: 1rem;
+    }
+
+    .resume-templates-template-description {
+        font-size: 0.875rem;
+    }
+
+    .resume-templates-tip-number {
+        font-size: 1.5rem;
+    }
+
+    .resume-templates-cta-title {
+        font-size: 1.15rem;
+    }
+
+    .resume-templates-cta-description {
+        font-size: 12px;
+    }
+
+    .resume-templates-cta-buttons {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .resume-templates-cta-btn {
+        width: 100%;
+        padding: 10px 16px;
+        font-size: 13px;
+    }
+}
