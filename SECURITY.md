@@ -1,0 +1,189 @@
+# Політика безпеки
+
+## Підтримувані версії
+
+Ми активно підтримуємо наступні версії WebStart Studio з оновленнями безпеки:
+
+| Версія | Підтримується |
+| ------ | ------------- |
+| 4.x.x  | ✅            |
+| 3.x.x  | ✅            |
+| 2.x.x  | ⚠️ обмежена   |
+| 1.x.x  | ❌            |
+| < 1.0  | ❌            |
+
+## Повідомлення про вразливості
+
+Безпека нашого проєкту є надзвичайно важливою. Якщо ви виявили вразливість безпеки, будь ласка, повідомте нам про це якнайшвидше.
+
+### Як повідомити про вразливість
+
+**НЕ створюйте публічний GitHub issue для повідомлення про вразливість безпеки.**
+
+Замість цього, будь ласка, надішліть детальний звіт на:
+
+📧 **security@webstartstudio.com**
+
+### Що включити в звіт
+
+- Тип вразливості (XSS, SQL ін'єкція, CSRF, JWT, тощо)
+- Повний опис вразливості
+- Кроки для відтворення проблеми
+- Потенційний вплив вразливості
+- Можливі сценарії експлуатації
+- Пропозиції щодо виправлення (якщо є)
+- Ваші контактні дані для подальшої комунікації
+
+### Що очікувати
+
+1. **Підтвердження отримання** — протягом 48 годин
+2. **Початкова оцінка** — протягом 7 днів
+3. **Регулярні оновлення** — кожні 7 днів
+4. **Виправлення** — залежно від серйозності
+5. **Публічне розкриття** — після випуску виправлення
+
+---
+
+## Безпека бекенду (v4.0.0+)
+
+З версії 4.0.0 проєкт включає Node.js + Express бекенд та MySQL базу даних. Нижче наведені специфічні рекомендації.
+
+### JWT Авторизація
+
+```javascript
+// Завжди верифікуйте токен на сервері
+const decoded = jwt.verify(token, process.env.JWT_SECRET);
+
+// Зберігайте JWT_SECRET тільки в .env
+JWT_SECRET = довгий_випадковий_рядок_мінімум_32_символи;
+```
+
+- Не зберігайте JWT у localStorage для критичних застосунків — використовуйте httpOnly cookies
+- Встановлюйте термін дії токена (`expiresIn`)
+- Використовуйте достатньо складний `JWT_SECRET`
+
+### Паролі
+
+```javascript
+// Завжди хешуйте паролі з bcrypt ✅
+const hash = await bcrypt.hash(password, 10);
+
+// Ніколи не зберігайте паролі у відкритому вигляді ❌
+db.query("INSERT INTO users SET password = ?", [plainPassword]);
+```
+
+### SQL Injection
+
+```javascript
+// Погано ❌
+db.query(`SELECT * FROM users WHERE id = ${userId}`);
+
+// Добре ✅ — параметризовані запити
+db.query("SELECT * FROM users WHERE id = ?", [userId]);
+```
+
+### CORS
+
+```javascript
+// Обмежте origins у production
+app.use(
+  cors({
+    origin: process.env.ALLOWED_ORIGIN || "http://localhost:3000",
+  }),
+);
+```
+
+### Environment Variables
+
+Ніколи не комітьте `.env` у репозиторій. Приклад `.env`:
+
+```bash
+DB_HOST=localhost
+DB_USER=your_db_user
+DB_PASS=your_strong_password
+DB_NAME=webstart_db
+JWT_SECRET=your_very_long_random_secret_key
+PORT=5000
+ALLOWED_ORIGIN=https://yourdomain.com
+```
+
+Додайте до `.gitignore`:
+
+```
+.env
+.env.local
+.env.*.local
+```
+
+---
+
+## Рекомендації з безпеки
+
+### Cross-Site Scripting (XSS)
+
+```javascript
+// Погано ❌
+element.innerHTML = userInput;
+
+// Добре ✅
+element.textContent = userInput;
+```
+
+### Небезпечні залежності
+
+```bash
+npm audit
+npm audit fix
+```
+
+### Для контрибʼюторів
+
+1. Перевіряйте залежності — використовуйте лише надійні пакети
+2. Валідуйте всі вхідні дані на сервері
+3. Санітизуйте вивід — захист від XSS
+4. Ніколи не логуйте паролі, токени або особисті дані
+
+---
+
+## Контрольний список безпеки
+
+### Перед деплоєм
+
+- [ ] Всі залежності оновлені (`npm audit`)
+- [ ] `.env` не потрапляє в репозиторій
+- [ ] JWT_SECRET достатньо складний
+- [ ] Паролі хешуються через bcrypt
+- [ ] SQL запити параметризовані
+- [ ] CORS обмежений до конкретного origin
+- [ ] HTTPS увімкнено
+- [ ] CSP заголовки налаштовані
+- [ ] Логування не містить чутливих даних
+
+---
+
+## Програма винагород (Bug Bounty)
+
+На даний момент офіційної програми немає, але ми цінуємо всіх дослідників безпеки:
+
+- Згадка в `SECURITY_HALL_OF_FAME.md` (за бажанням)
+- Згадка в release notes відповідного виправлення
+- Щира подяка від команди! 🙏
+
+---
+
+## Ресурси з безпеки
+
+- [OWASP Top 10](https://owasp.org/www-project-top-ten/)
+- [Node.js Security Best Practices](https://nodejs.org/en/docs/guides/security/)
+- [React Security Best Practices](https://snyk.io/learn/react-security/)
+- [JWT Best Practices](https://auth0.com/blog/a-look-at-the-latest-draft-for-jwt-bcp/)
+- [npm Security](https://docs.npmjs.com/security-best-practices)
+
+---
+
+## Контакти
+
+📧 Email: security@webstartstudio.com
+🔒 PGP Key: доступний на запит
+
+Дякуємо за допомогу в забезпеченні безпеки WebStart Studio! 🔐
