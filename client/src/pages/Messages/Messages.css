@@ -1,0 +1,368 @@
+/* ================= WRAPPER ================= */
+.msg-wrapper {
+    /* Збільшено до 1200px, щоб вмістити сайдбар + чат */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 24px;
+    font-family: system-ui;
+    height: calc(100vh - 120px);
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    /* Заборона будь-якого горизонтального скролу на рівні обгортки */
+    overflow-x: hidden;
+    width: 100%;
+}
+
+/* Гарантований border-box для всіх елементів */
+.msg-wrapper *,
+.msg-wrapper *::before,
+.msg-wrapper *::after {
+    box-sizing: border-box;
+}
+
+/* ================= HEADER ================= */
+.msg-header {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    border-radius: 16px;
+    padding: 20px 24px;
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    color: white;
+    flex-shrink: 0;
+}
+
+.msg-header-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    flex-shrink: 0;
+}
+
+.msg-title {
+    font-size: 18px;
+    font-weight: 700;
+    margin: 0 0 2px 0;
+}
+
+.msg-subtitle {
+    font-size: 13px;
+    opacity: 0.85;
+    margin: 0;
+}
+
+.msg-status {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 13px;
+    opacity: 0.9;
+}
+
+.msg-status-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #22c55e;
+    flex-shrink: 0;
+}
+
+/* ================= BODY ================= */
+.msg-body {
+    flex: 1;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: 16px 20px;
+    background: #f8f9ff;
+    border-radius: 16px;
+    margin-bottom: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    min-width: 0;
+    width: 100%;
+}
+
+.msg-loading {
+    text-align: center;
+    color: #aaa;
+    padding: 40px;
+}
+
+.msg-empty {
+    text-align: center;
+    padding: 40px;
+}
+
+/* ================= MESSAGE ================= */
+.msg-row {
+    display: flex;
+    max-width: 100%;
+    overflow: visible;
+    min-width: 0;
+}
+
+.msg-row.client {
+    justify-content: flex-end;
+}
+
+.msg-row.admin {
+    justify-content: flex-start;
+}
+
+.msg-avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    margin-right: 8px;
+    flex-shrink: 0;
+}
+
+.msg-bubble-wrapper {
+    min-width: 0;
+    max-width: 75%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.msg-row.client .msg-bubble-wrapper {
+    align-items: flex-end;
+}
+
+.msg-row.admin .msg-bubble-wrapper {
+    align-items: flex-start;
+}
+
+.msg-bubble {
+    padding: 10px 14px;
+    font-size: 14px;
+    line-height: 1.5;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    max-width: 100%;
+    word-wrap: break-word;
+    word-break: break-word;
+    overflow-wrap: anywhere;
+    white-space: normal;
+    overflow: hidden;
+}
+
+.msg-bubble.client {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    border-radius: 16px 16px 4px 16px;
+}
+
+.msg-bubble.admin {
+    background: white;
+    color: #333;
+    border-radius: 16px 16px 16px 4px;
+}
+
+/* ================= INPUT ================= */
+.msg-input-wrapper {
+    display: flex;
+    gap: 10px;
+    align-items: flex-end;
+    background: white;
+    border-radius: 16px;
+    padding: 12px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+    flex-shrink: 0;
+}
+
+.msg-textarea {
+    flex: 1;
+    border: none;
+    outline: none;
+    resize: none;
+    font-size: 14px;
+    font-family: system-ui;
+    line-height: 1.5;
+    background: transparent;
+    min-width: 0;
+    /* Дозволяє textarea стискатися */
+}
+
+/* ================= ADMIN LAYOUT ================= */
+.msg-admin-layout {
+    display: flex;
+    flex: 1;
+    gap: 16px;
+    overflow: hidden;
+    /* Обрізає виступи */
+    padding: 0 0 16px;
+    width: 100%;
+    min-width: 0;
+}
+
+.msg-admin-sidebar {
+    width: 280px;
+    min-width: 280px;
+    max-width: 280px;
+    flex-shrink: 0;
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    background: #f8f9ff;
+    border-radius: 16px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    /* Гарантує, що довгий текст не розпирає сайдбар */
+    contain: layout;
+}
+
+.msg-admin-chat {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    max-width: 100%;
+    overflow-x: hidden;
+    overflow-y: visible;
+}
+
+/* ================= ADMIN THREAD ITEM ================= */
+.msg-thread-item {
+    padding: 12px 14px;
+    border-radius: 12px;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    transition: all 0.2s;
+    overflow: hidden;
+    max-width: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    contain: layout;
+}
+
+.msg-thread-email {
+    font-size: 12px;
+    margin-bottom: 4px;
+    opacity: 0.6;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
+}
+
+.msg-thread-preview {
+    font-size: 13px;
+    white-space: normal;
+    overflow: hidden;
+    word-break: break-word;
+    overflow-wrap: anywhere;
+    opacity: 0.7;
+    max-width: 100%;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+/* ================= ІНШІ СТИЛІ (БЕЗ ЗМІН) ================= */
+.msg-locked-wrapper {
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: system-ui;
+    padding: 24px;
+}
+
+.msg-locked-card {
+    background: white;
+    border-radius: 20px;
+    padding: 48px 40px;
+    text-align: center;
+    max-width: 440px;
+    width: 100%;
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.1);
+}
+
+.msg-btn-primary {
+    padding: 13px;
+    border-radius: 10px;
+    border: none;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    font-weight: 700;
+    cursor: pointer;
+    font-size: 15px;
+    width: 100%;
+}
+
+.msg-btn-outline {
+    padding: 13px;
+    border-radius: 10px;
+    border: 2px solid #667eea;
+    background: transparent;
+    color: #667eea;
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 15px;
+    width: 100%;
+}
+
+.msg-time {
+    font-size: 11px;
+    color: #aaa;
+    margin-top: 4px;
+}
+
+.msg-time.right {
+    text-align: right;
+}
+
+.msg-time.left {
+    text-align: left;
+}
+
+.msg-send-btn {
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: none;
+    font-weight: 700;
+    font-size: 14px;
+    transition: 0.2s;
+    flex-shrink: 0;
+}
+
+.msg-send-btn.active {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    cursor: pointer;
+}
+
+.msg-send-btn.disabled {
+    background: #e2e8f0;
+    color: #aaa;
+    cursor: default;
+}
+
+.msg-hint {
+    text-align: center;
+    color: #aaa;
+    font-size: 12px;
+    margin-top: 8px;
+}
+
+.msg-locked-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}

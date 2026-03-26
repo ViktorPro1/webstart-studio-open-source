@@ -1,0 +1,101 @@
+@media (max-width: 1024px) {
+    .google-ads-glossary__header h1 {
+        font-size: 28px;
+    }
+
+    .google-ads-glossary__header p {
+        font-size: 16px;
+    }
+
+    .google-ads-glossary__content {
+        padding: 30px 20px;
+    }
+
+    .google-ads-glossary__search-input {
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+}
+
+@media (max-width: 768px) {
+    .google-ads-glossary {
+        padding: 15px;
+        overflow-x: hidden;
+        /* прибирає горизонтальний скрол */
+    }
+
+    .google-ads-glossary__container {
+        max-width: 100%;
+        border-radius: 12px;
+    }
+
+    .google-ads-glossary__header {
+        padding: 25px 15px;
+    }
+
+    .google-ads-glossary__header h1 {
+        font-size: 24px;
+    }
+
+    .google-ads-glossary__header p {
+        font-size: 14px;
+    }
+
+    .google-ads-glossary__search-input {
+        padding: 12px 15px;
+        font-size: 16px;
+        max-width: 100%;
+        box-sizing: border-box;
+        display: block;
+        margin: 0 auto;
+        /* вирівнює по центру */
+    }
+
+    .google-ads-glossary__term-title {
+        font-size: 18px;
+    }
+
+    .google-ads-glossary__term-definition {
+        font-size: 14px;
+        line-height: 1.6;
+    }
+}
+
+@media (max-width: 480px) {
+    .google-ads-glossary {
+        padding: 10px;
+        overflow-x: hidden;
+    }
+
+    .google-ads-glossary__header {
+        padding: 20px 15px;
+    }
+
+    .google-ads-glossary__header h1 {
+        font-size: 20px;
+    }
+
+    .google-ads-glossary__header p {
+        font-size: 13px;
+    }
+
+    .google-ads-glossary__search-input {
+        padding: 10px 12px;
+        font-size: 14px;
+        max-width: 95%;
+        box-sizing: border-box;
+        margin: 0 auto;
+    }
+
+    .google-ads-glossary__term-card {
+        padding: 15px;
+    }
+
+    .google-ads-glossary__term-title {
+        font-size: 16px;
+    }
+
+    .google-ads-glossary__term-definition {
+        font-size: 13px;
+    }
+}

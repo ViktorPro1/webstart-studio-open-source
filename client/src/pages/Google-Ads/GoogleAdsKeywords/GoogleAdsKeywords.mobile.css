@@ -1,0 +1,120 @@
+@media (max-width: 1024px) {
+    .google-ads-keywords {
+        max-width: 100%;
+        margin: 0 auto;
+        box-sizing: border-box;
+        overflow-x: hidden;
+    }
+
+    .google-ads-keywords__container {
+        max-width: 95%;
+        margin: 0 auto;
+    }
+
+    .google-ads-keywords__results-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .google-ads-keywords__form-group input,
+    .google-ads-keywords__form-group select {
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+}
+
+@media (max-width: 768px) {
+    .google-ads-keywords__container {
+        max-width: 100%;
+        border-radius: 10px;
+    }
+
+    .google-ads-keywords__header {
+        padding: 25px 15px;
+    }
+
+    .google-ads-keywords__header h1 {
+        font-size: 24px;
+    }
+
+    .google-ads-keywords__content {
+        padding: 20px 15px;
+    }
+
+    .google-ads-keywords__checkbox-group {
+        grid-template-columns: 1fr;
+    }
+
+    .google-ads-keywords__results-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .google-ads-keywords__form-group input,
+    .google-ads-keywords__form-group select {
+        padding: 12px;
+        font-size: 14px;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+}
+
+@media (max-width: 420px) {
+    .google-ads-keywords {
+        padding: 8px;
+        overflow-x: hidden;
+    }
+
+    .google-ads-keywords__container {
+        max-width: 100%;
+        border-radius: 12px;
+    }
+
+    .google-ads-keywords__header {
+        padding: 20px 12px;
+    }
+
+    .google-ads-keywords__header h1 {
+        font-size: 20px;
+        margin-bottom: 6px;
+    }
+
+    .google-ads-keywords__header p {
+        font-size: 13px;
+    }
+
+    .google-ads-keywords__content {
+        padding: 15px 10px;
+    }
+
+    .google-ads-keywords__form-group input,
+    .google-ads-keywords__form-group select {
+        padding: 10px;
+        font-size: 13px;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+
+    .google-ads-keywords__generate-btn {
+        padding: 12px;
+        font-size: 15px;
+        width: 100%;
+    }
+
+    .google-ads-keywords__results {
+        padding: 15px 10px;
+    }
+
+    .google-ads-keywords__result-group {
+        padding: 12px;
+    }
+
+    .google-ads-keywords__keyword-item {
+        padding: 8px 10px;
+        font-size: 12px;
+    }
+
+    .google-ads-keywords__copy-btn {
+        padding: 12px;
+        font-size: 14px;
+        width: 100%;
+    }
+}

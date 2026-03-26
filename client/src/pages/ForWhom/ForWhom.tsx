@@ -1,0 +1,60 @@
+import React from 'react';
+import './ForWhom.css';
+import './ForWhom.mobile.css';
+
+const ForWhom = () => {
+  const audience = [
+    {
+      emoji: '💼',
+      title: 'Фрілансерам',
+      description: 'Потрібне портфоліо для Upwork, Fiverr, LinkedIn'
+    },
+    {
+      emoji: '🎓',
+      title: 'Випускникам',
+      description: 'Перше резюме без досвіду — покажемо ваш потенціал'
+    },
+    {
+      emoji: '🚀',
+      title: 'Стартапам',
+      description: 'Швидкий лендінг для MVP або презентації інвесторам'
+    },
+    {
+      emoji: '🏢',
+      title: 'Малому бізнесу',
+      description: 'Візитка в інтернеті без зайвих витрат'
+    },
+    {
+      emoji: '🎨',
+      title: 'Креативникам',
+      description: 'Дизайнери, фотографи, художники — ваші роботи заслуговують на красиву подачу'
+    },
+    {
+      emoji: '🔧',
+      title: 'Майстрам',
+      description: 'Електрики, сантехніки, будівельники — сторінка з контактами і прикладами робіт'
+    }
+  ];
+
+  return (
+    <>
+
+      <div className="for-whom-page">
+        <section className="audience-section">
+          <h2>👥 Кому підійдуть наші можливості</h2>
+          <div className="audience-grid">
+            {audience.map((item, index) => (
+              <div className="audience-card" key={index}>
+                <div className="audience-emoji">{item.emoji}</div>
+                <h3>{item.title}</h3>
+                <p>{item.description}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+      </div>
+    </>
+  );
+};
+
+export default ForWhom;

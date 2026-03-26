@@ -1,0 +1,72 @@
+@media (max-width: 768px) {
+    .instruction-root .instruction-header h1 {
+        font-size: 1.6em;
+    }
+
+    .instruction-root .instruction-header p {
+        font-size: 0.95em;
+    }
+
+    .instruction-root .tab {
+        font-size: 0.9em;
+        padding: 15px 10px;
+    }
+
+    .instruction-root .tab-text {
+        display: none;
+    }
+
+    .instruction-root .content {
+        padding: 20px 15px;
+    }
+
+    .instruction-root .tab-content h2 {
+        font-size: 1.4em;
+    }
+
+    .instruction-root .step-header {
+        font-size: 1em;
+    }
+
+    .instruction-root .button-group {
+        flex-direction: column;
+    }
+
+    .instruction-root .btn {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .instruction-root .navigation-buttons {
+        gap: 10px;
+    }
+
+    .instruction-root .nav-btn {
+        flex: 1;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .instruction-root .instruction-header {
+        padding: 25px 15px;
+    }
+
+    .instruction-root .instruction-header h1 {
+        font-size: 1.3em;
+    }
+
+    .instruction-root .step-number {
+        width: 28px;
+        height: 28px;
+        font-size: 0.85em;
+    }
+
+    .instruction-root .step-details {
+        padding-left: 35px;
+    }
+
+    .instruction-root .content {
+        padding: 15px 10px;
+    }
+}

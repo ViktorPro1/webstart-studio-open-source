@@ -1,0 +1,262 @@
+@media (max-width: 1024px) {
+    .hero-section {
+        grid-template-columns: 1fr;
+        padding: 60px 40px;
+        gap: 40px;
+        min-height: auto;
+    }
+
+    .hero-content {
+        padding: 0;
+        text-align: center;
+    }
+
+    .hero-title {
+        font-size: 42px;
+        white-space: normal;
+    }
+
+    .hero-subtitle {
+        font-size: 18px;
+    }
+
+    .hero-image {
+        max-height: 400px;
+        max-width: 300px;
+        margin: 0 auto;
+    }
+
+    section {
+        padding: 80px 40px;
+    }
+
+    .services-grid,
+    .features-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+
+    .home-section-title {
+        font-size: 36px;
+    }
+}
+
+/* Mobile: 768px ↓ */
+@media (max-width: 768px) {
+    .hero-section {
+        padding: 50px 20px;
+        gap: 30px;
+    }
+
+    .hero-title {
+        font-size: 32px;
+    }
+
+    .hero-subtitle {
+        font-size: 16px;
+    }
+
+    .services-grid,
+    .features-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    section {
+        padding: 60px 20px;
+    }
+
+    .home-section-title {
+        font-size: 28px;
+        margin-bottom: 50px;
+    }
+
+    .hero-image {
+        max-height: 300px;
+        max-width: 300px;
+        margin: 0 auto;
+    }
+
+    .hero-content {
+        padding: 0;
+    }
+
+    /* Ticker Mobile Styles */
+    .home-ticker-wrapper {
+        padding: 0.95rem 0;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .home-ticker-track {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+        flex-wrap: nowrap;
+        animation: tickerScroll 40s linear infinite;
+        will-change: transform;
+        transform: translate3d(0, 0, 0);
+    }
+
+    .home-ticker-item {
+        gap: 0.5rem;
+        font-size: 0.9rem;
+        flex-shrink: 0;
+    }
+
+    .home-ticker-icon {
+        width: 32px;
+        height: 32px;
+    }
+
+    .home-ticker-icon svg {
+        width: 18px;
+        height: 18px;
+    }
+
+    .home-ticker-text {
+        font-size: 0.9rem;
+    }
+
+    .home-ticker-separator {
+        font-size: 1rem;
+        margin-left: 0.75rem;
+    }
+
+    .home-ticker-wrapper::before,
+    .home-ticker-wrapper::after {
+        width: 50px;
+    }
+}
+
+/* Small Mobile: 480px ↓ */
+@media (max-width: 480px) {
+    .hero-title {
+        font-size: 26px;
+    }
+
+    .hero-subtitle {
+        font-size: 14px;
+    }
+
+    section {
+        padding: 40px 15px;
+    }
+
+    .home-section-title {
+        font-size: 24px;
+        margin-bottom: 40px;
+    }
+
+    .hero-image {
+        max-height: 220px;
+    }
+
+    /* Ticker XS */
+    .home-ticker-wrapper {
+        padding: 0.9rem 0;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .home-ticker-track {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        gap: 1.5rem;
+        flex-wrap: nowrap;
+        animation: tickerScroll 50s linear infinite;
+        will-change: transform;
+        transform: translate3d(0, 0, 0);
+    }
+
+    .home-ticker-item {
+        gap: 0.4rem;
+        font-size: 0.85rem;
+        flex-shrink: 0;
+    }
+
+    .home-ticker-icon {
+        width: 28px;
+        height: 28px;
+    }
+
+    .home-ticker-icon svg {
+        width: 16px;
+        height: 16px;
+    }
+
+    .home-ticker-text {
+        font-size: 0.85rem;
+    }
+
+    .home-ticker-separator {
+        font-size: 0.9rem;
+        margin-left: 0.5rem;
+    }
+
+    .home-ticker-wrapper::before,
+    .home-ticker-wrapper::after {
+        width: 30px;
+    }
+}
+
+/* Розробка */
+
+@media (max-width:760px) {
+
+    .handmade-section {
+        padding: 70px 25px;
+    }
+
+    .handmade-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px;
+    }
+
+    .handmade-item {
+        padding: 22px;
+    }
+
+    .handmade-item h3 {
+        font-size: 18px;
+    }
+
+    .handmade-item p {
+        font-size: 13.5px;
+    }
+
+}
+
+
+@media (max-width:420px) {
+
+    .handmade-section {
+        padding: 60px 20px;
+    }
+
+    .handmade-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .handmade-item {
+        padding: 20px;
+    }
+
+    .handmade-item h3 {
+        font-size: 17px;
+    }
+
+    .handmade-item p {
+        font-size: 13px;
+    }
+
+}
